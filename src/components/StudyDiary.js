@@ -4,8 +4,19 @@ import { MdAddCircleOutline } from 'react-icons/md';
 import { Link } from "react-router-dom";
 import { auth, db } from "../firebase";
 import { MdRemoveCircleOutline } from 'react-icons/md';
+import './Home.scss';
 import './StudyDiary.scss';
 import towrite from '../img/towrite.png';
+import logo from '../img/templogo.png';
+import home from '../img/home.png';
+import timetable from '../img/timetable.png';
+import diary from '../img/diary.png';
+import user from '../img/user.png';
+import setting from '../img/settings.png';
+
+const onClick = () => {
+    alert('로그인하세요!');
+};
 
 const StudyDiary = () => {
     const [diaryList, setDiaryList] = useState([]);
@@ -37,7 +48,7 @@ const StudyDiary = () => {
                 }
             })}
             <Link to="/writediary" className="towrite"><img src={towrite}/></Link>
-            <Link to='/' className="studydiary-tohome">To Home</Link>
+            {/* <Link to='/' className="studydiary-tohome">To Home</Link> */}
         </div>
     )
 }

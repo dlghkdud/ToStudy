@@ -53,7 +53,7 @@ const Home = ({ setIsLoggedIn }) => {
                 <div className="nav"><img src={user}/></div>
                 <div className="nav"><img src={setting}/></div>
                 {/* <h1 className="title">공100<BsPencil /></h1> */}
-                <div></div>
+    
                 <div className="right">
                     {auth.currentUser ? 
                         <div onClick={logOut} className="logout">Logout</div> : 

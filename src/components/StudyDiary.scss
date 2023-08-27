@@ -45,21 +45,21 @@
             right: -215px;
             cursor: pointer;
         }
-        &:nth-child(even) {
+        &:nth-child(4n+2){
             .diary {
                 background: linear-gradient(to bottom, #F5BFBD,#EEF4E6);
                 border: none;
                 box-shadow: 2.0px 2.0px 3.0px hsl(0deg 0% 0% / 0.3);
             }
         }
-        &:nth-child(even) {
+        &:nth-child(4n+3) {
             .diary {
                 background: linear-gradient(to bottom, #EEF4E6,#E9F6EF,#C0E8E8);
                 border: none;
                 box-shadow: 2.0px 2.0px 3.0px hsl(0deg 0% 0% / 0.3);
             }
         }
-        &:nth-child(even) {
+        &:nth-child(4n+4){
             .diary {
                 background: linear-gradient(to bottom, #E0F3ED,#C0E8E8);
                 border: none;
@@ -78,7 +78,7 @@
         border: 5px solid #F5BFBD;
         margin: 10px;
         border-radius: 10px;
-        color: #53d129;
+        // color: #53d129; 왜있는건지모르겠음뭐가있는건가 
         text-decoration: none;
         font-size: 100px;
         background: #EEF4E6;
