@@ -111,6 +111,12 @@
         justify-content: center;
         align-items: center;
         flex-direction: row;
+        .tamago{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
         .link {
             text-decoration: none;
             display: flex;

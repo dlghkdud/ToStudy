@@ -10,6 +10,7 @@ import timetable from '../img/timetable.png';
 import diary from '../img/diary.png';
 import user from '../img/user.png';
 import setting from '../img/settings.png';
+import bckg from '../img/tamagobackground.png';
 // import { BsPencil } from 'react-icons/bs';
 
 const Home = ({ setIsLoggedIn }) => {
@@ -64,6 +65,10 @@ const Home = ({ setIsLoggedIn }) => {
                 </div>
             </div>
             <div className="main">
+                <div className="tamago">
+                    <img className='back' src={bckg}></img>
+                </div>
+                
                 {/* <div className="to">
                     {auth.currentUser ? <Link to="/tostudy" className="link">ToStudy List</Link> : <span onClick={onClick} className="linkwhenNoUser">ToStudy List</span>}
                     <PiNotePencil />
@@ -72,6 +77,8 @@ const Home = ({ setIsLoggedIn }) => {
                     {auth.currentUser ? <Link to="/studydiary" className="link">Study Diary</Link> : <span onClick={onClick} className="linkwhenNoUser">Study Diary</span>}
                     <CiMemoPad />
                 </div> */}
+
+                {/* 투두리스트 */}
                 {auth.currentUser ?
                     <Link to="/tostudy" className="link">
                         <h5 className="bigtext">ToStudy List</h5>
@@ -81,8 +88,9 @@ const Home = ({ setIsLoggedIn }) => {
                         <h5 className="bigtext">ToStudy List</h5>
                         <PiNotePencil className="icon" />
                     </span>
-                }
-                {auth.currentUser ? 
+                } 
+                {/* 다이어리 */}
+                {/* {auth.currentUser ? 
                     <Link to="/studydiary" className="link">
                         <h5 className="bigtext">Study Diary</h5>
                         <CiMemoPad className="icon" />
@@ -90,7 +98,7 @@ const Home = ({ setIsLoggedIn }) => {
                     <span onClick={onClick} className="link">
                         <h5 className="bigtext">Study Diary</h5>
                         <CiMemoPad className="icon" />
-                    </span>}
+                    </span>} */}
             </div>
         </div>
     );
