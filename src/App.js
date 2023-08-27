@@ -21,7 +21,6 @@ function App() {
       <Route path='/tostudy' element={isLoggedin ? <StudyListPage /> : <Navigate to="/" />} />
       <Route path='/studydiary' element={isLoggedin ? <StudyDiary /> : <Navigate to="/" />} />
       <Route path='/writediary' element={isLoggedin ? <WriteDiary /> : <Navigate to="/" />} />
-      {/* <Route path='/tostudy' element={auth.currentUser ? <StudyListPage /> : <Navigate to="/login" />} /> */}
     </Routes>
   );
 }

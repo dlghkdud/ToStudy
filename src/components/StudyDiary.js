@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { auth, db } from "../firebase";
 import { MdRemoveCircleOutline } from 'react-icons/md';
 import './StudyDiary.scss';
+import towrite from '../img/towrite.png';
 
 const StudyDiary = () => {
     const [diaryList, setDiaryList] = useState([]);
@@ -35,7 +36,7 @@ const StudyDiary = () => {
                     );
                 }
             })}
-            <Link to="/writediary" className="towrite"><MdAddCircleOutline /></Link>
+            <Link to="/writediary" className="towrite"><img src={towrite}/></Link>
             <Link to='/' className="studydiary-tohome">To Home</Link>
         </div>
     )

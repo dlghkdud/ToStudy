@@ -4,7 +4,13 @@ import { useEffect } from "react";
 import './Home.scss';
 import { CiMemoPad } from 'react-icons/ci';
 import { PiNotePencil } from 'react-icons/pi';
-import { BsPencil } from 'react-icons/bs';
+import logo from '../img/templogo.png';
+import home from '../img/home.png';
+import timetable from '../img/timetable.png';
+import diary from '../img/diary.png';
+import user from '../img/user.png';
+import setting from '../img/settings.png';
+// import { BsPencil } from 'react-icons/bs';
 
 const Home = ({ setIsLoggedIn }) => {
     const logOut = () => {
@@ -31,7 +37,23 @@ const Home = ({ setIsLoggedIn }) => {
     return (
         <div className="homebody">
             <div className="header">
-                <h1 className="title">공100<BsPencil /></h1>
+                {/* 임시로고 */}
+                <div className="title"><img src={logo}/></div>
+                {/* 내비게이션바 */}
+                <Link to="/" className="nav"><img src={home}/></Link>
+                <div className="nav"><img src={timetable}/></div>
+                {auth.currentUser ? 
+                    <Link to="/studydiary" className="nav">
+                        <img src={diary}/>
+                    </Link>:
+                    <span onClick={onClick} className="nav">
+                        <img src={diary}/>
+                    </span>
+                }
+                <div className="nav"><img src={user}/></div>
+                <div className="nav"><img src={setting}/></div>
+                {/* <h1 className="title">공100<BsPencil /></h1> */}
+                <div></div>
                 <div className="right">
                     {auth.currentUser ? 
                         <div onClick={logOut} className="logout">Logout</div> : 
